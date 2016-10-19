@@ -27,13 +27,16 @@
   },
   "license": "ISC",
   "dependencies": {
+    "antd": "^2.1.0",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-router": "^4.0.0-alpha.5"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.5",
+    "babel-plugin-import": "^1.0.1",
     "babel-plugin-transform-class-properties": "^6.16.0",
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "babel-plugin-transform-react-constant-elements": "^6.9.1",

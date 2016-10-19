@@ -7,6 +7,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.json'],
     alias: {
+      hocs: `${paths.srcDir}/hocs`,
       src: paths.srcDir // this allows import 'src/...' without knowing the relative path
     }
   },
