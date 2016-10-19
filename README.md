@@ -1,5 +1,5 @@
-# React Starter Kit
-[![Build Status](https://travis-ci.org/xiaofan2406/react-starter-kit.svg?branch=master)](https://travis-ci.org/xiaofan2406/react-starter-kit) [![dependencies Status](https://david-dm.org/xiaofan2406/react-starter-kit/status.svg)](https://david-dm.org/xiaofan2406/react-starter-kit) [![devDependencies Status](https://david-dm.org/xiaofan2406/react-starter-kit/dev-status.svg)](https://david-dm.org/xiaofan2406/react-starter-kit?type=dev)
+# My Portfolio
+[![Build Status](https://travis-ci.org/xiaofan2406/portfolio.svg?branch=master)](https://travis-ci.org/xiaofan2406/portfolio) [![dependencies Status](https://david-dm.org/xiaofan2406/portfolio/status.svg)](https://david-dm.org/xiaofan2406/portfolio) [![devDependencies Status](https://david-dm.org/xiaofan2406/portfolio/dev-status.svg)](https://david-dm.org/xiaofan2406/portfolio?type=dev)
 
 
 ### Get Started
@@ -37,13 +37,3 @@ using [`react-hot-loader`](https://github.com/gaearon/react-hot-loader/tree/next
   npm i -g pushstate-server
   pushstate-server ./build 9000
   ```
-
-### Branches
-- [redux](https://github.com/xiaofan2406/react-starter-kit/tree/redux)
-- [mobx](https://github.com/xiaofan2406/react-starter-kit/tree/mobx)
-- [electron](https://github.com/xiaofan2406/react-starter-kit/tree/electron)
-
-
-### Folders
-- `config`: webpack configuration files
-- `src`: source files directory, processed by webpack
