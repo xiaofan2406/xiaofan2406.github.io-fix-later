@@ -12,16 +12,28 @@ class Display extends React.PureComponent {
   };
 
   state = {
-    line: {}
+    line: {},
+    stick: false
   };
 
   displayLine = item => () => {
+    this.setState({ stick: false });
     this.setState({ line: item });
+  }
+
+  leaveLine = () => {
+    if (!this.state.stick) {
+      this.setState({ line: {} });
+    }
+  }
+
+  stickLine = () => {
+    this.setState({ stick: true });
   }
 
   render() {
     const { data } = this.props;
-    const { line } = this.state;
+    const { line, stick } = this.state;
     return (
       <Card
         title={<div className="Display-header">{data.header}</div>}
@@ -33,6 +45,8 @@ class Display extends React.PureComponent {
             line={item}
             key={index}
             onActiveLine={this.displayLine(item)}
+            onLeaveLine={this.leaveLine}
+            onStickLine={this.stickLine}
           />
         ))}
         <TransictionGroup
@@ -41,9 +55,9 @@ class Display extends React.PureComponent {
           transitionLeaveTimeout={300}
           component="div"
         >
-          {Object.keys(line).length > 0 &&
+          {(line.title || stick) &&
             <div className="Display-content">
-              {`'${line.description}'`}
+              {line.description}
             </div>
           }
         </TransictionGroup>

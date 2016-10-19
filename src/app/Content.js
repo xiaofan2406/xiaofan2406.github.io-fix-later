@@ -32,8 +32,6 @@ class Content extends React.PureComponent {
       this.setState({ loading: true });
 
       const target = routes.filter(route => route.pattern === location.pathname)[0];
-      console.log(target);
-      // const self = this;
       this.deferTimer = setTimeout(() => {
         this.setState({
           loading: false,

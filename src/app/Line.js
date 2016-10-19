@@ -7,23 +7,31 @@ import './Line.css';
 class Line extends React.PureComponent {
   static propTypes = {
     line: React.PropTypes.object.isRequired,
+    onStickLine: React.PropTypes.func.isRequired,
+    onLeaveLine: React.PropTypes.func.isRequired,
     onActiveLine: React.PropTypes.func.isRequired
   };
 
   state = {
     hover: false
   };
+
   mouseEnter = () => {
     if (this.state.hover === false) {
-      console.log('change to hover');
       this.setState({ hover: true });
       this.props.onActiveLine();
     }
   }
+
   mouseLeave = () => {
     if (this.state.hover === true) {
       this.setState({ hover: false });
+      this.props.onLeaveLine();
     }
+  }
+
+  clickLine = () => {
+    this.props.onStickLine(true);
   }
 
   render() {
@@ -35,6 +43,7 @@ class Line extends React.PureComponent {
         className="Line-root"
         onMouseEnter={this.mouseEnter}
         onMouseLeave={this.mouseLeave}
+        onClick={this.clickLine}
       >
         <div className={`Line-title animated ${hover && 'jello'} infinite`}>
           {line.title}
