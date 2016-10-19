@@ -32,12 +32,16 @@ class Content extends React.PureComponent {
       this.setState({ loading: true });
 
       const target = routes.filter(route => route.pattern === location.pathname)[0];
-      this.deferTimer = setTimeout(() => {
+
+      target.preload().then((result) => {
         this.setState({
           loading: false,
-          data: require(`src/routes/${target.data}`) // eslint-disable-line
+          data: {
+            ...result,
+            ...require(`src/routes/${target.data}`) // eslint-disable-line
+          }
         });
-      }, 400);
+      }).catch(console.log);
     }
   }
 
