@@ -1,0 +1,15 @@
+.Line-root {
+  margin-bottom: 16px;
+
+  &>.ant-card-body {
+    user-select: none;
+    display: flex;
+    padding: 0.7em;
+    font-size: 18px;
+    justify-content: center;
+  }
+}
+
+.Line-title {
+  cursor: default;
+}

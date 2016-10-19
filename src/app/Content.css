@@ -1,0 +1,14 @@
+.Content-root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.Content-display-enter {
+  animation: rollIn 400ms linear;
+}
+
+.Content-display-leave {
+  animation: rollOut 400ms linear;
+}

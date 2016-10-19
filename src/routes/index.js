@@ -1,18 +1,21 @@
-import Me from './app/Me';
-import Work from './app/Work';
-
 export default [
   {
     pattern: '/',
     exactly: true,
     name: 'Me',
     icon: 'user',
-    component: Me
+    data: 'me.json'
   },
   {
     pattern: '/work',
     name: 'Work',
     icon: 'environment',
-    component: Work
+    data: 'work.json'
+  },
+  {
+    pattern: '/projects',
+    name: 'Project',
+    icon: 'book',
+    data: 'project.json'
   }
 ];

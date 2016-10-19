@@ -1,0 +1,32 @@
+.Display-header {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  text-align: center;
+}
+
+.Display-card {
+  width: 320px;
+  height: 100%;
+  border-radius: 0;
+
+  animation: zoomInLeft 500ms ease;
+
+  & .ant-card-head {
+    border-bottom: 0;
+  }
+}
+
+.Display-description-enter {
+  animation: flipInY 500ms ease;
+}
+
+.Display-description-leave {
+  animation: flipOutY 500ms ease;
+}
+
+.Display-content {
+  font-size: 24px;
+  font-style: italic;
+  margin-top: 1em;
+}
