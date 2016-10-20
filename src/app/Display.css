@@ -17,15 +17,13 @@
   }
 }
 
-.Display-content-enter {
-  animation: flipInY 500ms ease;
-}
-
-.Display-content-leave {
-  animation: flipOutY 500ms ease;
-}
-
-.Display-main {
+.Display-content {
+  display: none;
   font-size: 20px;
   margin-top: 3em;
+
+  &.active {
+    display: block;
+    animation: flipInY 500ms ease;
+  }
 }
