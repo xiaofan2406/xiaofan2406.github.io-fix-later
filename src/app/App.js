@@ -1,10 +1,10 @@
 import React from 'react';
 import Router from 'react-router/BrowserRouter';
 import Match from 'react-router/Match';
+import routes from 'src/routes';
 
 import './App.css';
 import Header from './Header';
-import Content from './Content';
 
 
 function App() {
@@ -15,7 +15,14 @@ function App() {
           <Header />
         </div>
         <div className="App-main" >
-          <Match pattern="*" component={Content} />
+          {routes.map(route => (
+            <Match
+              key={route.pattern}
+              pattern={route.pattern}
+              exactly={route.exactly}
+              component={route.component}
+            />
+          ))}
         </div>
       </div>
     </Router>

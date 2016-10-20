@@ -17,15 +17,15 @@
   }
 }
 
-.Display-description-enter {
+.Display-content-enter {
   animation: flipInY 500ms ease;
 }
 
-.Display-description-leave {
+.Display-content-leave {
   animation: flipOutY 500ms ease;
 }
 
-.Display-content {
+.Display-main {
   font-size: 20px;
   margin-top: 3em;
 }

@@ -8,22 +8,23 @@ import Line from './Line';
 
 class Display extends React.PureComponent {
   static propTypes = {
-    data: React.PropTypes.object.isRequired
+    header: React.PropTypes.string.isRequired,
+    lines: React.PropTypes.array.isRequired
   };
 
   state = {
-    line: {},
+    activeLine: {},
     stick: false
   };
 
   displayLine = item => () => {
     this.setState({ stick: false });
-    this.setState({ line: item });
+    this.setState({ activeLine: item });
   }
 
   leaveLine = () => {
     if (!this.state.stick) {
-      this.setState({ line: {} });
+      this.setState({ activeLine: {} });
     }
   }
 
@@ -32,15 +33,15 @@ class Display extends React.PureComponent {
   }
 
   render() {
-    const { data } = this.props;
-    const { line, stick } = this.state;
+    const { header, lines } = this.props;
+    const { activeLine, stick } = this.state;
     return (
       <Card
-        title={<div className="Display-header">{data.header}</div>}
+        title={<div className="Display-header">{header}</div>}
         className="Display-card"
         bordered={false}
       >
-        {data.content.map((item, index) => (
+        {lines.map((item, index) => (
           <Line
             line={item}
             key={index}
@@ -50,14 +51,14 @@ class Display extends React.PureComponent {
           />
         ))}
         <TransictionGroup
-          transitionName="Display-description"
+          transitionName="Display-content"
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}
           component="div"
         >
-          {(line.title || stick) &&
-            <div className="Display-content">
-              {line.description}
+          {(activeLine.title || stick) &&
+            <div className="Display-main">
+              {activeLine.content}
             </div>
           }
         </TransictionGroup>
