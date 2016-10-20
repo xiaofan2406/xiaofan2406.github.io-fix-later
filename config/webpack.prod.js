@@ -26,9 +26,9 @@ module.exports = {
     alias: common.resolve.alias
   },
   output: {
-    path: paths.buildDir,
-    filename: 'js/[name].[chunkhash:8].js',
-    chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+    path: paths.rootDir,
+    filename: 'dist/js/[name].[chunkhash:8].js',
+    chunkFilename: 'dist/js/[name].[chunkhash:8].chunk.js',
     publicPath: '/'
   },
   module: {
@@ -53,7 +53,7 @@ module.exports = {
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"production"' }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new ExtractTextPlugin('css/[name].[contenthash:8].css'),
+    new ExtractTextPlugin('dist/css/[name].[contenthash:8].css'),
     new HtmlWebpackPlugin({
       inject: true,
       template: `${paths.srcDir}/index.html`,
@@ -86,7 +86,7 @@ module.exports = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: 'js/[name].[chunkhash:8].js'
+      filename: 'dist/js/[name].[chunkhash:8].js'
     })
   ]
 };

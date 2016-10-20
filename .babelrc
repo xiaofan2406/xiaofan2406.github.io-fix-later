@@ -15,7 +15,7 @@
       "plugins": ["react-hot-loader/babel", "transform-react-jsx-source", "transform-react-jsx-self"]
     },
     "production": {
-      "plugins": ["transform-react-remove-prop-types", "transform-react-constant-elements"]
+      "plugins": ["transform-react-remove-prop-types"]
     }
   }
 }

@@ -1,5 +1,5 @@
 # My Portfolio
-[![Build Status](https://travis-ci.org/xiaofan2406/portfolio.svg?branch=master)](https://travis-ci.org/xiaofan2406/portfolio) [![dependencies Status](https://david-dm.org/xiaofan2406/portfolio/status.svg)](https://david-dm.org/xiaofan2406/portfolio) [![devDependencies Status](https://david-dm.org/xiaofan2406/portfolio/dev-status.svg)](https://david-dm.org/xiaofan2406/portfolio?type=dev)
+[![Build Status](https://travis-ci.org/xiaofan2406/xiaofan2406.github.io.svg?branch=master)](https://travis-ci.org/xiaofan2406/xiaofan2406.github.io) [![dependencies Status](https://david-dm.org/xiaofan2406/xiaofan2406.github.io/status.svg)](https://david-dm.org/xiaofan2406/xiaofan2406.github.io) [![devDependencies Status](https://david-dm.org/xiaofan2406/xiaofan2406.github.io/dev-status.svg)](https://david-dm.org/xiaofan2406/xiaofan2406.github.io?type=dev)
 
 
 ### Get Started
