@@ -53,7 +53,6 @@ function npmsInfo(detail) {
 }
 
 function Project({ data }) {
-  console.log(data);
   const rst = data[0].data;
   const vst = data[1].data;
   const vv = data[2].data;
