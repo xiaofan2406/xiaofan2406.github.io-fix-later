@@ -11,9 +11,9 @@ function Me() {
       title: 'Xiaofan Wu',
       content: (
         <div>
-          <p>I am a junior developer based in Melbourne.</p><p> I aim to becoming a
+          <p>I am a junior developer based in Melbourne.</p><p> I aim to become a
             full-stack <code>JavaScript</code> developer.</p>
-          <p>Game development and Software Engineering are my secondary interests.</p>
+          <p>Game development and Software Engineering are my secondary interest.</p>
         </div>
       )
     },
