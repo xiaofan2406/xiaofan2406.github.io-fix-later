@@ -5,6 +5,7 @@ import withRouter from 'hocs/with-router';
 import routes from 'src/routes';
 
 import './Header.css';
+import Social from './Social';
 
 
 class Header extends React.Component {
@@ -23,6 +24,7 @@ class Header extends React.Component {
     const { location } = this.props;
     return (
       <div className="Header-root">
+        <Social />
         <Menu
           onClick={this.routeTo}
           mode="horizontal"

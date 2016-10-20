@@ -11,7 +11,9 @@ function Me() {
       title: 'Xiaofan Wu',
       content: (
         <div>
-          My digital name is xiaofan2406. Find me easily in different platform by this name
+          <p>I am a junior developer based in Melbourne.</p><p> I aim to becoming a
+            full-stack <code>JavaScript</code> developer.</p>
+          <p>Game development and Software Engineering are my secondary interests.</p>
         </div>
       )
     },
@@ -19,8 +21,9 @@ function Me() {
       title: 'I write code',
       content: (
         <div>
-          I am trying to become a full-stack JavaScript developer.
-          Also interested in game development and software engineering
+          I enjoy developing with <code>React</code> and <code>Vue</code>
+          as front-end frameworks,
+          and <code>Express</code> or <code>Koa</code> as backend server.
         </div>
       )
     },
@@ -28,7 +31,8 @@ function Me() {
       title: 'I play games',
       content: (
         <div>
-          I play CS:GO and Overwatch casually. The Witcher 3 is my favorite game.
+          I play <code>CS:GO</code> and <code>Overwatch</code> casually.
+          <code>The Witcher 3</code> is my favorite game.
         </div>
       )
     }

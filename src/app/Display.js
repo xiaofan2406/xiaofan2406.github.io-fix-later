@@ -23,27 +23,29 @@ class Display extends React.PureComponent {
     const { header, lines } = this.props;
     const { activeLine } = this.state;
     return (
-      <Card
-        title={<div className="Display-header">{header}</div>}
-        className="Display-card"
-        bordered={false}
-      >
-        {lines.map((item, index) => (
-          <Line
-            line={item}
-            key={index}
-            onActiveLine={this.displayLine(item)}
-          />
-        ))}
-        {lines.map(item => (
-          <div
-            className={`Display-content ${item.title === activeLine.title && 'active'}`}
-            key={item.title}
-          >
-            {activeLine.content}
-          </div>
-        ))}
-      </Card>
+      <div className="Display-root">
+        <Card
+          title={<div className="Display-header">{header}</div>}
+          className="Display-card"
+          bordered={false}
+        >
+          {lines.map((item, index) => (
+            <Line
+              line={item}
+              key={index}
+              onActiveLine={this.displayLine(item)}
+            />
+          ))}
+          {lines.map(item => (
+            <div
+              className={`Display-content ${item.title === activeLine.title ? 'active' : ''}`}
+              key={item.title}
+            >
+              {activeLine.content}
+            </div>
+          ))}
+        </Card>
+      </div>
     );
   }
 }

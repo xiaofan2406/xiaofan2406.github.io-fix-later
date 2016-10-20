@@ -1,6 +1,7 @@
 .Header-root {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 18vh;
 }

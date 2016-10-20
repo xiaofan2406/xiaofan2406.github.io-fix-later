@@ -19,11 +19,47 @@
 
 .Display-content {
   display: none;
-  font-size: 20px;
-  margin-top: 3em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin-top: 2em;
+  line-height: 1.6em;
 
   &.active {
     display: block;
     animation: flipInY 500ms ease;
+  }
+
+  & p {
+    margin-bottom: 0.5em;
+  }
+
+  & code, & pre {
+    background-color: #f4f4f4;
+    font-family: monospace;
+    font-size: 16px;
+    padding: 0.2em;
+    margin: 0 0.2em;
+  }
+
+  & pre {
+    display: block;
+    white-space: normal;
+    margin: 0;
+  }
+
+  & .npmsinfo {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+
+    & .npmsscroe {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .caption {
+      display: inline-block;
+      font-size: 12px;
+    }
   }
 }
