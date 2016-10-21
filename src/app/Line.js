@@ -11,34 +11,34 @@ class Line extends React.PureComponent {
   };
 
   state = {
-    hover: false
+    active: false
   };
 
-  mouseEnter = () => {
-    if (this.state.hover === false) {
-      this.setState({ hover: true });
+  activateLine = () => {
+    if (this.state.active === false) {
+      this.setState({ active: true });
       this.props.onActiveLine();
     }
   }
 
-  mouseLeave = () => {
-    if (this.state.hover === true) {
-      this.setState({ hover: false });
+  deactivateLine = () => {
+    if (this.state.active === true) {
+      this.setState({ active: false });
     }
   }
 
-
   render() {
     const { line } = this.props;
-    const { hover } = this.state;
+    const { active } = this.state;
     return (
       <Card
         bordered={false}
         className="Line-root"
-        onMouseEnter={this.mouseEnter}
-        onMouseLeave={this.mouseLeave}
+        onMouseEnter={this.activateLine}
+        onMouseLeave={this.deactivateLine}
+        onTouchStart={this.activateLine}
       >
-        <div className={`Line-title animated ${hover && 'jello'} infinite`}>
+        <div className={`Line-title animated ${active && 'jello'} infinite`}>
           {line.title}
         </div>
       </Card>

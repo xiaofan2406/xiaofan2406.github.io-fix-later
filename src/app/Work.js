@@ -36,10 +36,5 @@ function Work() {
   );
 }
 
-Work.propTypes = {
-  // from preAxios
-  data: React.PropTypes.object.isRequired
-};
-
 
 export default Work;

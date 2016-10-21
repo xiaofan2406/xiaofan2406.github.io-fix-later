@@ -43,10 +43,5 @@ function Me() {
   );
 }
 
-Me.propTypes = {
-  // from preAxios
-  data: React.PropTypes.object.isRequired
-};
-
 
 export default Me;
