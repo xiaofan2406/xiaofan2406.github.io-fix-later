@@ -1,6 +1,5 @@
 import React from 'react';
-import axios from 'axios';
-import preAxios from 'hocs/pre-axios';
+import Anchor from 'widgets/blank-anchor';
 
 import Display from './Display';
 
@@ -13,7 +12,8 @@ function Work() {
         <div>
           <p>I work for Engineering Education Australia.</p>
           <p>One of my responsibilities is maintianing the official
-            <code><a rel="noopener noreferrer" target="_blank" href="http://eeaust.com.au/">EEA website</a></code></p>
+            <code><Anchor href="http://eeaust.com.au/">EEA website</Anchor></code>
+          </p>
         </div>
       )
     },
@@ -21,7 +21,7 @@ function Work() {
       title: 'myCPD',
       content: (
         <div>
-          <p><code><a rel="noopener noreferrer" target="_blank" href="http://mycpd.engineersaustralia.org.au/">myCPD</a></code> is a LMS that provides training to professional engineers.</p>
+          <p><code><Anchor href="http://mycpd.engineersaustralia.org.au/">myCPD</Anchor></code> is a LMS that provides training to professional engineers.</p>
           <p>I look after this product. My tasks include active maintenance
           and implementing and deploy new features.</p>
         </div>
@@ -42,8 +42,4 @@ Work.propTypes = {
 };
 
 
-export default preAxios({
-  preload() {
-    return axios.get('https://api.github.com/users/xiaofan2406');
-  }
-})(Work);
+export default Work;

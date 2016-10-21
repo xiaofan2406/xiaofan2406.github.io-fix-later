@@ -2,13 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import preAxios from 'hocs/pre-axios';
 import { Progress } from 'antd';
+import Anchor from 'widgets/blank-anchor';
 
 import Display from './Display';
 
 function gitHubInfo(data) {
   return (
     <div>
-      <h4><a rel="noopener noreferrer" target="_blank" href={data.html_url}>{data.name}</a></h4>
+      <h4><Anchor href={data.html_url}>{data.name}</Anchor></h4>
       <pre>{data.description}</pre>
     </div>
   );
@@ -16,15 +17,27 @@ function gitHubInfo(data) {
 
 function buildInfo(fullname) {
   return (
-    <p><a title="travis build status" rel="noopener noreferrer" target="_blank" href={`https://travis-ci.org/${fullname}`}><img src={`https://travis-ci.org/${fullname}.svg?branch=master`} alt="build status" /></a></p>
+    <p>
+      <Anchor title="travis build status" href={`https://travis-ci.org/${fullname}`}>
+        <img src={`https://travis-ci.org/${fullname}.svg?branch=master`} alt="build status" />
+      </Anchor>
+    </p>
   );
 }
 
 function dependencyInfo(fullname) {
   return (
     <div>
-      <p><a title="dependency status" rel="noopener noreferrer" target="_blank" href={`https://david-dm.org/${fullname}`}><img src={`https://david-dm.org/${fullname}/status.svg`} alt="dependencies" /></a></p>
-      <p><a title="devDependencies status" rel="noopener noreferrer" target="_blank" href={`https://david-dm.org/${fullname}?type=dev`}><img src={`https://david-dm.org/${fullname}/dev-status.svg`} alt="devDependencies" /></a></p>
+      <p>
+        <Anchor title="dependency status" href={`https://david-dm.org/${fullname}`}>
+          <img src={`https://david-dm.org/${fullname}/status.svg`} alt="dependencies" />
+        </Anchor>
+      </p>
+      <p>
+        <Anchor title="devDependencies status" href={`https://david-dm.org/${fullname}?type=dev`}>
+          <img src={`https://david-dm.org/${fullname}/dev-status.svg`} alt="devDependencies" />
+        </Anchor>
+      </p>
     </div>
   );
 }

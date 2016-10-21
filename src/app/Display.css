@@ -1,7 +1,6 @@
 .Display-header {
   font-size: 30px;
   color: rgba(0, 0, 0, 0.1);
-  font-style: italic;
   text-align: center;
 }
 
@@ -20,7 +19,7 @@
 .Display-content {
   display: none;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 2em;
   line-height: 1.6em;
 
@@ -36,8 +35,8 @@
   & code, & pre {
     background-color: #f4f4f4;
     font-family: monospace;
-    font-size: 16px;
-    padding: 0.2em;
+    font-size: 14px;
+    padding: 0.1em;
     margin: 0 0.2em;
   }
 
