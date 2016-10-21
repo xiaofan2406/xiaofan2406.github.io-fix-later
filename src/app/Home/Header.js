@@ -2,10 +2,10 @@ import React from 'react';
 import { Menu, Icon } from 'antd';
 import withLocation from 'hocs/with-location';
 import withRouter from 'hocs/with-router';
-import routes from 'src/routes';
+import Anchor from 'widgets/blank-anchor';
 
 import './Header.css';
-import Social from './Social';
+import hashConfig from './hash-config';
 
 
 class Header extends React.Component {
@@ -22,16 +22,28 @@ class Header extends React.Component {
 
   render() {
     const { location } = this.props;
+    const fakeHash = location.hash ? location.hash : '#me';
     return (
       <div className="Header-root">
-        <Social />
+        <div className="Header-social">
+          <Anchor href="https://au.linkedin.com/in/xiaofan-wu-b1320659">
+            <i className="fa fa-linkedin-square" />
+          </Anchor>
+          <Anchor href="https://github.com/xiaofan2406">
+            <i className="fa fa-github" />
+          </Anchor>
+          <Anchor href="http://stackoverflow.com/users/972527/xiaofan2406">
+            <i className="fa fa-stack-overflow" />
+          </Anchor>
+        </div>
+
         <Menu
           onClick={this.routeTo}
           mode="horizontal"
-          selectedKeys={[location.pathname]}
+          selectedKeys={[fakeHash]}
         >
-          {routes.map(({ pattern, icon, name }) => (
-            <Menu.Item key={pattern}>
+          {hashConfig.map(({ hash, icon, name }) => (
+            <Menu.Item key={hash}>
               <Icon type={icon} />{name}
             </Menu.Item>
           ))}

@@ -1,14 +1,14 @@
-.App-root {
+.Home-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.App-header {
+.Home-header {
   margin-bottom: 5vh;
 }
 
-.App-main {
+.Home-main {
   flex: 1;
   display: flex;
   justify-content: center;
