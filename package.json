@@ -7,8 +7,8 @@
     "prebuild": "rm -r -f ./dist && rm -f ./index.html && rm -f ./favicon.ico",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.prod.js",
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./src",
-    "preversion": "npm run lint && npm run build",
-    "postversion": "git push"
+    "preversion": "npm run lint && npm run build && git add --all && git commit -m \"add built files\"",
+    "postversion": "git push && git push --tags"
   },
   "engines": {
     "node": "^6.x",
