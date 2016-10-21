@@ -28,14 +28,14 @@ module.exports = {
       test: /\.(eot|otf|ttf|woff|woff2)(\?.*)?$/,
       loader: 'file',
       query: {
-        name: 'dist/fonts/[name].[hash:8].[ext]'
+        name: 'dist/fonts/[name].[ext]'
       }
     },
     {
       test: /\.(jpg|jpeg|png|gif|svg|ico|webp)(\?.*)?$/,
       loader: 'file',
       query: {
-        name: 'dist/media/[name].[hash:8].[ext]'
+        name: 'dist/media/[name].[ext]'
       }
     },
     {
@@ -43,7 +43,7 @@ module.exports = {
       loader: 'url',
       query: {
         limit: 10000,
-        name: 'dist/media/[name].[hash:8].[ext]'
+        name: 'dist/media/[name].[ext]'
       }
     }
   ],

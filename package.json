@@ -8,8 +8,7 @@
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.prod.js",
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./src",
     "prelive": "npm run lint && npm run build",
-    "live": "git add --all && git commit -am \"add built files\" ",
-    "postlive": "git push"
+    "live": "git add --all && git commit -am \"add built files\" && git push"
   },
   "engines": {
     "node": "^6.x",
@@ -42,7 +41,6 @@
     "babel-plugin-import": "^1.0.1",
     "babel-plugin-transform-class-properties": "^6.16.0",
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
-    "babel-plugin-transform-react-constant-elements": "^6.9.1",
     "babel-plugin-transform-react-jsx-self": "^6.11.0",
     "babel-plugin-transform-react-jsx-source": "^6.9.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.2.10",
