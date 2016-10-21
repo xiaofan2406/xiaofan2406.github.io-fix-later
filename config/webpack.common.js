@@ -9,6 +9,7 @@ module.exports = {
     alias: {
       widgets: `${paths.srcDir}/widgets`,
       hocs: `${paths.srcDir}/hocs`,
+      store: `${paths.srcDir}/store`,
       src: paths.srcDir // this allows import 'src/...' without knowing the relative path
     }
   },

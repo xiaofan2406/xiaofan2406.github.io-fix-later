@@ -32,7 +32,9 @@
     "axios": "^0.15.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-router": "^4.0.0-alpha.5"
+    "react-redux": "^4.4.5",
+    "react-router": "^4.0.0-alpha.5",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
@@ -63,6 +65,8 @@
     "postcss-import": "^8.1.2",
     "postcss-loader": "^1.0.0",
     "react-hot-loader": "^3.0.0-beta.6",
+    "redux-immutable-state-invariant": "^1.2.4",
+    "redux-logger": "^2.7.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
