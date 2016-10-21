@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/xiaofan2406/xiaofan2406.github.io.svg?branch=master)](https://travis-ci.org/xiaofan2406/xiaofan2406.github.io) [![dependencies Status](https://david-dm.org/xiaofan2406/xiaofan2406.github.io/status.svg)](https://david-dm.org/xiaofan2406/xiaofan2406.github.io) [![devDependencies Status](https://david-dm.org/xiaofan2406/xiaofan2406.github.io/dev-status.svg)](https://david-dm.org/xiaofan2406/xiaofan2406.github.io?type=dev)
 
 
-### Get Started
+### Scripts
 - Install dependencies
 ```
 npm i
@@ -13,10 +13,15 @@ npm i
 npm run dev
 ```
 
-- Build for production (build only, no server setup)
+- Push built files to github.io
 ```
-npm run build
+npm run live
 ```
+
+
+### Routing
+- Because of using GitHub pages, has no control over server side routing. As a result, using hash to route.
+- All sections live in `/` route, for easy migration on other hosts 
 
 
 ### Details
