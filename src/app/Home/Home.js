@@ -4,6 +4,7 @@ import { getHomeHash } from 'store/selectors';
 
 import './Home.css';
 import Header from './Header';
+import Trip from './Trip';
 import hashConfig from './hash-config';
 import { actions } from './home-dux';
 
@@ -28,6 +29,7 @@ class Home extends React.PureComponent {
         <div className="Home-main">
           <Component />
         </div>
+        <Trip />
       </div>
     );
   }
