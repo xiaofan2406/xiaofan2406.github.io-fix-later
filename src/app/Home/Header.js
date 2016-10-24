@@ -19,6 +19,7 @@ class Header extends React.Component {
 
   routeTo = (item) => {
     const { setHash, router } = this.props;
+    // keep redux state updated as well as update hash in URL
     setHash(item.key);
     router.transitionTo({
       pathname: '/',
