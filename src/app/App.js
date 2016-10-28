@@ -7,7 +7,7 @@ import routes from 'src/routes';
 function App() {
   return (
     <Router>
-      <div className="App-root">
+      <div className="App">
         {routes.map(route => (
           <Match
             key={route.pattern}

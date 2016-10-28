@@ -1,10 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+import reduxThunk from 'redux-thunk';
 
 import reducers from './reducers';
 
 
 function configureStore(initialState = {}) {
-  const middleware = []; // add redux-thunk or saga here
+  const middleware = [reduxThunk]; // add redux-thunk or saga here
 
   // dev only middlewares
   if (process.env.NODE_ENV === 'development') {

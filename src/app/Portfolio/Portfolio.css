@@ -1,0 +1,18 @@
+.Portfolio {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Portfolio-header {
+  height: 18vh;
+  margin-bottom: 5vh;
+}
+
+.Portfolio-main {
+  flex: 1;
+}
+
+.Portfolio-footer {
+  height: 32px;
+}

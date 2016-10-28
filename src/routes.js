@@ -1,10 +1,10 @@
-import Home from './app/Home';
+import Portfolio from './app/Portfolio/Portfolio';
 
 
 export default [
   {
     pattern: '/',
     exactly: true,
-    component: Home
+    component: Portfolio
   }
 ];
