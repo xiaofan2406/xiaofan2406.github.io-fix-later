@@ -1,0 +1,5 @@
+.PortfolioPlayerDisplay {
+  &.active {
+    animation: fadeIn 500ms linear;
+  }
+}

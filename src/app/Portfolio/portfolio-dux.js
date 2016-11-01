@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-
+import { stop } from 'redux-player/src/actions';
 
 export const actionTypes = {
   START_LOADING: 'START_LOADING',
@@ -7,7 +7,6 @@ export const actionTypes = {
   SET_ERROR: 'SET_ERROR',
   CLEAR_ERROR: 'CLEAR_ERROR',
   SET_INFOLIST: 'SET_INFOLIST',
-  SET_CURRENT: 'SET_CURRENT',
   SWITCH_MODE: 'SWITCH_MODE'
 };
 
@@ -34,24 +33,22 @@ export const actions = {
     payload: infoList
   }),
 
-  setCurrent: current => ({
-    type: actionTypes.SET_CURRENT,
-    payload: current
-  }),
-
-  switchMode: () => ({
-    type: actionTypes.SWITCH_MODE
-  }),
+  switchMode: () => (dispatch) => {
+    dispatch(stop()); // stop playing when switch to gallery mode
+    dispatch({
+      type: actionTypes.SWITCH_MODE
+    });
+  },
 
   loadingSuccess: infoList => (dispatch) => {
-    dispatch(actions.finishLoading());
     dispatch(actions.clearError());
     dispatch(actions.setInfoList(infoList));
+    dispatch(actions.finishLoading());
   },
 
   loadingFail: err => (dispatch) => {
-    dispatch(actions.finishLoading());
     dispatch(actions.setError(err));
+    dispatch(actions.finishLoading());
   }
 };
 
@@ -87,15 +84,6 @@ function infoListReducer(state = [], action) {
   }
 }
 
-function currentReducer(state = '', action) {
-  switch (action.type) {
-    case actionTypes.SET_CURRENT:
-      return action.payload;
-    default:
-      return state;
-  }
-}
-
 function modeReducer(state = 'player', action) {
   switch (action.type) {
     case actionTypes.SWITCH_MODE:
@@ -110,7 +98,6 @@ export default combineReducers({
   loading: loadingReducer,
   error: errorReducer,
   infoList: infoListReducer,
-  current: currentReducer,
   mode: modeReducer
 });
 
@@ -119,6 +106,5 @@ export const selectors = {
   isLoading: state => state.loading,
   getError: state => state.error,
   getInfoList: state => state.infoList,
-  getCurrent: state => state.infoList.filter(item => item.slug === state.current)[0] || {},
   getMode: state => state.mode
 };

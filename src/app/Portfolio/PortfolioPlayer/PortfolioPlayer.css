@@ -1,0 +1,16 @@
+.PortfolioPlayer {
+  width: 360px;
+}
+
+.PortfolioPlayer-control {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  opacity: 0;
+
+  &.show {
+    animation: fadeIn 500ms linear;
+    opacity: 1;
+  }
+}

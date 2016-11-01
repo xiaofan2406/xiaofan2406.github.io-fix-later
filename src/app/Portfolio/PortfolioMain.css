@@ -1,0 +1,13 @@
+.PortfolioMain {
+  padding: 12px;
+}
+
+.PortfolioMain-content {
+  display: flex;
+  justify-content: center;
+}
+
+.PortfolioMain-menu {
+  text-align: right;
+  margin-bottom: 12px;
+}

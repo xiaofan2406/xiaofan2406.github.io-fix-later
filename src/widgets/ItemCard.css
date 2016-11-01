@@ -1,0 +1,21 @@
+.ItemCard {
+  border-radius: 0;
+  margin-bottom: 16px;
+
+  & .ant-card-head-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2db7f5;
+  }
+
+  & p {
+    font-size: 14px;
+    margin-bottom: 0.5em;
+  }
+
+  & em {
+    font-size: inherit;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
