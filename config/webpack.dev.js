@@ -17,7 +17,7 @@ module.exports = {
   },
   output: {
     // For dev, `path` and `filename` are not important because of using webpack-dev-server
-    path: paths.buildDir,
+    path: paths.rootDir,
     filename: 'bundle.js',
     // In development, we always serve from the root. This makes config easier.
     publicPath: '/',

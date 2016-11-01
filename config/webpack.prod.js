@@ -35,7 +35,7 @@ module.exports = {
     preLoaders: [...common.preLoaders],
     loaders: [{
       test: /\.js$/,
-      include: paths.srcDir,
+      include: [paths.srcDir, `${paths.nodeModulesDir}/redux-player`],
       loader: 'babel'
     }, {
       test: /\.css$/,
