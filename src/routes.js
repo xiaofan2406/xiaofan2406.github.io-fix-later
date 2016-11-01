@@ -1,10 +1,10 @@
-import Portfolio from './app/Portfolio/Portfolio';
+import Version from './app/Version';
 
 
 export default [
   {
     pattern: '/',
     exactly: true,
-    component: Portfolio
+    component: Version
   }
 ];

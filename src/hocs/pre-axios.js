@@ -13,8 +13,12 @@ export default options => MyComponent =>
       this.loadData();
     }
 
+    componentWillUnmount() {
+      this.promise.cancel();
+    }
+
     loadData = () => {
-      options.preload()
+      this.promise = options.preload()
       .then((data) => {
         this.setState({ data });
       })

@@ -15,7 +15,10 @@ function ItemCard({ item, height, ...rest }) {
       )}
       style={{ height }}
     >
-      <div dangerouslySetInnerHTML={{ __html: item.content }} />
+      <div
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: item.content }}
+      />
     </Card>
   );
 }

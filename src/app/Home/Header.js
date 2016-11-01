@@ -1,35 +1,31 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Menu, Icon } from 'antd';
-import Anchor from 'widgets/blank-anchor';
-import { getHomeHash } from 'store/selectors';
+import withLocation from 'hocs/with-location';
 import withRouter from 'hocs/with-router';
+import Anchor from 'widgets/blank-anchor';
 
 import './Header.css';
 import hashConfig from './hash-config';
-import { actions } from './home-dux';
 
 
 class Header extends React.Component {
   static propTypes = {
-    router: React.PropTypes.object.isRequired,
-    hash: React.PropTypes.string.isRequired,
-    setHash: React.PropTypes.func.isRequired
+    // from withLocation
+    location: React.PropTypes.object.isRequired,
+    // from withRouter
+    router: React.PropTypes.object.isRequired
   };
 
   routeTo = (item) => {
-    const { setHash, router } = this.props;
-    // keep redux state updated as well as update hash in URL
-    setHash(item.key);
-    router.transitionTo({
-      pathname: '/',
+    this.props.router.transitionTo({
+      ...this.props.location,
       hash: item.key
     });
   }
 
   render() {
-    const trueHash = this.props.hash || '#me';
-
+    const { location } = this.props;
+    const fakeHash = location.hash ? location.hash : '#me';
     return (
       <div className="Header-root">
         <div className="Header-social">
@@ -47,7 +43,7 @@ class Header extends React.Component {
         <Menu
           onClick={this.routeTo}
           mode="horizontal"
-          selectedKeys={[trueHash]}
+          selectedKeys={[fakeHash]}
         >
           {hashConfig.map(({ hash, icon, name }) => (
             <Menu.Item key={hash}>
@@ -60,9 +56,5 @@ class Header extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  hash: getHomeHash(state)
-});
 
-
-export default connect(mapStateToProps, { setHash: actions.setHash })(withRouter()(Header));
+export default withRouter()(withLocation()(Header));

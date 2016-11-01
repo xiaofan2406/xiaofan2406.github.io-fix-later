@@ -6,6 +6,7 @@ import Anchor from 'widgets/blank-anchor';
 
 import Display from './Display';
 
+
 function gitHubInfo(data) {
   return (
     <div>

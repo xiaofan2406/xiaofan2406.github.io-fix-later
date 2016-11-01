@@ -1,43 +1,44 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Card } from 'antd';
-import { getHomeHoveredLineTitle } from 'store/selectors';
 
 import './Line.css';
-import { actions } from './home-dux';
 
 
 class Line extends React.PureComponent {
   static propTypes = {
     line: React.PropTypes.object.isRequired,
-    hoveredLineTitle: React.PropTypes.string.isRequired,
-    setActiveLineTitle: React.PropTypes.func.isRequired,
-    blurActiveLine: React.PropTypes.func.isRequired
+    onActiveLine: React.PropTypes.func.isRequired
   };
 
+  state = {
+    active: false
+  };
 
   activateLine = () => {
-    const { setActiveLineTitle, line } = this.props;
-    setActiveLineTitle(line.title);
+    if (this.state.active === false) {
+      this.setState({ active: true });
+      this.props.onActiveLine();
+    }
   }
 
-  blurLine = () => {
-    const { blurActiveLine } = this.props;
-    blurActiveLine();
+  deactivateLine = () => {
+    if (this.state.active === true) {
+      this.setState({ active: false });
+    }
   }
 
   render() {
-    const { line, hoveredLineTitle } = this.props;
-    const hovered = hoveredLineTitle === line.title;
+    const { line } = this.props;
+    const { active } = this.state;
     return (
       <Card
         bordered={false}
         className="Line-root"
         onMouseEnter={this.activateLine}
-        onMouseLeave={this.blurLine}
+        onMouseLeave={this.deactivateLine}
         onTouchStart={this.activateLine}
       >
-        <div className={`Line-title animated ${hovered && 'jello'} infinite`}>
+        <div className={`Line-title animated ${active && 'jello'} infinite`}>
           {line.title}
         </div>
       </Card>
@@ -45,11 +46,5 @@ class Line extends React.PureComponent {
   }
 }
 
-const mapStateToProps = state => ({
-  hoveredLineTitle: getHomeHoveredLineTitle(state)
-});
 
-export default connect(mapStateToProps, {
-  setActiveLineTitle: actions.setActiveLineTitle,
-  blurActiveLine: actions.blurActiveLine
-})(Line);
+export default Line;

@@ -7,7 +7,6 @@ import { getData } from 'src/server';
 import { actions } from './portfolio-dux';
 import PortfolioHeader from './PortfolioHeader';
 import PortfolioMain from './PortfolioMain';
-import PortfolioFooter from './PortfolioFooter';
 import './Portfolio.css';
 
 
@@ -38,9 +37,6 @@ class Portfolio extends React.PureComponent {
         </div>
         <div className="Portfolio-main">
           <PortfolioMain />
-        </div>
-        <div className="Portfolio-footer">
-          <PortfolioFooter />
         </div>
       </div>
     );
