@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home/Home'; // version 1
 import Portfolio from './Portfolio/Portfolio'; // version 2
+import Piece from './Piece/Piece';
 
 
 function Version({ location }) {
@@ -11,8 +12,10 @@ function Version({ location }) {
       return <Home location={location} />;
     case '2':
       return <Portfolio location={location} />;
+    case '3':
+      return <Piece location={location} />;
     default:
-      return <Home location={location} />;
+      return <Portfolio location={location} />;
   }
 }
 
