@@ -1,0 +1,14 @@
+.Footer {
+  padding: 4px;
+  text-align: right;
+
+  & ul {
+    display: inline-block;
+    list-style: none;
+
+    & li {
+      display: inline-block;
+      margin-left: 4px;
+    }
+  }
+}

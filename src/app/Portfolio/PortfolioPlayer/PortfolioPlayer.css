@@ -1,5 +1,6 @@
 .PortfolioPlayer {
   width: 360px;
+  position: relative;
 }
 
 .PortfolioPlayer-control {

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { isListLoading, getListError } from 'store/selectors';
 import { getData } from 'src/server';
 
+import Footer from '../common/Footer';
 import { actions } from './portfolio-dux';
 import PortfolioHeader from './PortfolioHeader';
 import PortfolioMain from './PortfolioMain';
@@ -38,6 +39,9 @@ class Portfolio extends React.PureComponent {
         </div>
         <div className="Portfolio-main">
           <PortfolioMain />
+        </div>
+        <div className="Portfolio-footer">
+          <Footer />
         </div>
       </div>
     );

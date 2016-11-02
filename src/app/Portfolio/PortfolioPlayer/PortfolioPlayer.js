@@ -6,6 +6,7 @@ import IconButton from 'widgets/IconButton';
 import { getIsLooping, getIsShuffle, getCanPrevious, getCanNext, getIsPlaying } from 'redux-player/src/selectors';
 import classnames from 'classnames';
 
+import PortfolioPlayerBanner from './PortfolioPlayerBanner';
 import PortfolioPlayerDisplay from './PortfolioPlayerDisplay';
 import './PortfolioPlayer.css';
 
@@ -26,7 +27,7 @@ class PortfolioPlayer extends React.PureComponent {
     setFrames(
       infoList.map(() => ({ // index is the same, so no extra needed
         action: () => new Promise((resolve) => {
-          delay(3000).then(resolve);
+          delay(3500).then(resolve);
         })
       }))
     );
@@ -68,6 +69,7 @@ class PortfolioPlayer extends React.PureComponent {
 
     return (
       <div className="PortfolioPlayer" onMouseEnter={this.hover} onMouseLeave={this.blur}>
+        <PortfolioPlayerBanner />
         <div className={controlClasses}>
           <div>
             <IconButton title="Previous" onClick={previous} disabled={!canPrevious}>
