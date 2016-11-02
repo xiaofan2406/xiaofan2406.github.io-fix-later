@@ -22,7 +22,7 @@ export default options => MyComponent =>
       .then((data) => {
         this.setState({ data });
       })
-      .catch(console.log);
+      .catch(console.error);
     }
 
     render() {

@@ -7,6 +7,7 @@ import { getData } from 'src/server';
 import { actions } from './portfolio-dux';
 import PortfolioHeader from './PortfolioHeader';
 import PortfolioMain from './PortfolioMain';
+import PortfolioError from './PortfolioError';
 import './Portfolio.css';
 
 
@@ -23,11 +24,11 @@ class Portfolio extends React.PureComponent {
     const { loading, error } = this.props;
 
     if (loading) {
-      return <Spin />;
+      return <div className="Portfolio-center"><Spin /></div>;
     }
 
-    if (error) { // TODO error component
-      return <p>{JSON.stringify(error)}</p>;
+    if (error) {
+      return <div className="Portfolio-center"><PortfolioError error={error} /></div>;
     }
 
     return (

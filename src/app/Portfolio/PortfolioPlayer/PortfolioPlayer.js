@@ -4,7 +4,6 @@ import { actions } from 'redux-player';
 import { getInfoList } from 'store/selectors';
 import IconButton from 'widgets/IconButton';
 import { getIsLooping, getIsShuffle, getCanPrevious, getCanNext, getIsPlaying } from 'redux-player/src/selectors';
-import { Card } from 'antd';
 import classnames from 'classnames';
 
 import PortfolioPlayerDisplay from './PortfolioPlayerDisplay';
@@ -68,7 +67,7 @@ class PortfolioPlayer extends React.PureComponent {
     });
 
     return (
-      <Card className="PortfolioPlayer" bordered={false} onMouseEnter={this.hover} onMouseLeave={this.blur}>
+      <div className="PortfolioPlayer" onMouseEnter={this.hover} onMouseLeave={this.blur}>
         <div className={controlClasses}>
           <div>
             <IconButton title="Previous" onClick={previous} disabled={!canPrevious}>
@@ -100,7 +99,7 @@ class PortfolioPlayer extends React.PureComponent {
         {infoList.map((item, index) => ( // render all to fake transition for animation
           <PortfolioPlayerDisplay item={item} index={index} key={index} />
         ))}
-      </Card>
+      </div>
     );
   }
 }
