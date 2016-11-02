@@ -4,10 +4,12 @@ import { getInfoList } from 'store/selectors';
 import { Row, Col } from 'antd';
 import ItemCard from 'widgets/ItemCard';
 
+import './PortfolioGallery.css';
+
 
 function PortfolioGallery({ infoList }) {
   return (
-    <Row gutter={16}>
+    <Row gutter={16} className="PortfolioGallery">
       {infoList.map((item, index) => (
         <Col xs={24} sm={12} md={6} lg={4} key={index}>
           <div className="PortfolioGallery-item">
