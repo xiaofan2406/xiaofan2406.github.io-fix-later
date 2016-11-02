@@ -3,13 +3,13 @@
   margin-bottom: 16px;
 
   & .ant-card-head-title {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
     color: #2db7f5;
   }
 
   & p {
-    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
     margin-bottom: 0.5em;
   }
 
@@ -18,4 +18,9 @@
     font-style: normal;
     font-weight: 500;
   }
+}
+
+.ItemCard-action {
+  text-align: right;
+  font-size: 16px;
 }

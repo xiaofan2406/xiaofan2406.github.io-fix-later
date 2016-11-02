@@ -36,7 +36,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^4.0.0-alpha.5",
     "redux": "^3.6.0",
-    "redux-player": "0.0.2",
+    "redux-player": "0.0.3",
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {

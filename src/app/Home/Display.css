@@ -1,6 +1,7 @@
 .Display-header {
+  font-family: 'Comfortaa', cursive;
   font-size: 30px;
-  color: rgba(0, 0, 0, 0.1);
+  color: #e2e2e2;
   text-align: center;
 }
 
@@ -18,7 +19,7 @@
 
 .Display-content {
   display: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   margin-top: 2em;
   line-height: 1.6em;
