@@ -12,18 +12,16 @@ function ItemCard({ item, height, ...rest }) {
       className="ItemCard"
       title={item.name}
       style={{ height }}
+      extra={item.type !== 'static' && (
+        <Anchor href={item.link} title={item.name}>
+          <i className="fa fa-arrow-right" aria-hidden="true" />
+        </Anchor>
+      )}
     >
       <div
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: item.content }}
       />
-      {item.type !== 'static' && (
-        <div className="ItemCard-action">
-          <Anchor href={item.link} title={item.name}>
-            <i className="fa fa-arrow-right" aria-hidden="true" />
-          </Anchor>
-        </div>
-      )}
     </Card>
   );
 }

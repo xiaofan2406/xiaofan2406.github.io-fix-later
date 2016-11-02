@@ -3,7 +3,8 @@
   margin-bottom: 16px;
 
   & .ant-card-head-title {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: normal;
     color: #2db7f5;
   }
 
@@ -16,11 +17,6 @@
   & em {
     font-size: inherit;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
   }
-}
-
-.ItemCard-action {
-  text-align: right;
-  font-size: 16px;
 }

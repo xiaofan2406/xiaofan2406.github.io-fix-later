@@ -11,7 +11,7 @@ function Home({ location }) {
   const Component = hashConfig.filter(item => item.hash === fakeHash)[0].component;
 
   return (
-    <div className="Home-root">
+    <div className="Home">
       <div className="Home-header">
         <Header />
       </div>

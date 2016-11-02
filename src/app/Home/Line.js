@@ -33,7 +33,7 @@ class Line extends React.PureComponent {
     return (
       <Card
         bordered={false}
-        className="Line-root"
+        className="Line"
         onMouseEnter={this.activateLine}
         onMouseLeave={this.deactivateLine}
         onTouchStart={this.activateLine}

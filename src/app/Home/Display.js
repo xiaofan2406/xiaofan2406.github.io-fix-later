@@ -23,7 +23,7 @@ class Display extends React.PureComponent {
     const { header, lines } = this.props;
     const { activeLine } = this.state;
     return (
-      <div className="Display-root">
+      <div className="Display">
         <Card
           title={<div className="Display-header">{header}</div>}
           className="Display-card"

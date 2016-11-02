@@ -1,4 +1,6 @@
 .Social {
+  animation: slideInDown 500ms ease;
+
   & > a {
     font-size: 18px;
     margin: 0 0.5em;
@@ -8,4 +10,5 @@
       color: #2db7f5;
     }
   }
+
 }

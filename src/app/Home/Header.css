@@ -1,24 +1,13 @@
-.Header-root {
+.Header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 18vh;
-
-  & .ant-menu {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
-  }
 }
 
-.Header-social {
-  & > a {
-    font-size: 18px;
-    margin: 0 0.5em;
-    color: #ddd;
-
-    &:hover {
-      color: #2db7f5;
-    }
-  }
+.Header-menu {
+  animation: slideInUp 500ms ease;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
 }

@@ -13,7 +13,7 @@ function PortfolioGallery({ infoList }) {
       {infoList.map((item, index) => (
         <Col xs={24} sm={12} md={6} lg={4} key={index}>
           <div className="PortfolioGallery-item">
-            <ItemCard item={item} height={300} />
+            <ItemCard item={item} height={260} />
           </div>
         </Col>
         ))}

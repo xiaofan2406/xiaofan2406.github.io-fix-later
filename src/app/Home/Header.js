@@ -27,10 +27,11 @@ class Header extends React.Component {
     const { location } = this.props;
     const fakeHash = location.hash ? location.hash : '#me';
     return (
-      <div className="Header-root">
+      <div className="Header">
         <Social />
 
         <Menu
+          className="Header-menu"
           onClick={this.routeTo}
           mode="horizontal"
           selectedKeys={[fakeHash]}
