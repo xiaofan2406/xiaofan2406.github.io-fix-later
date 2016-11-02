@@ -14,7 +14,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     client: `${paths.srcDir}/index.js`,
-    vendor: Object.keys(pkg.dependencies)
+    vendor: Object.keys(pkg.dependencies).filter(item => item !== 'antd')
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
