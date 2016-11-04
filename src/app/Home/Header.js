@@ -1,7 +1,6 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
-import withLocation from 'hocs/with-location';
-import withRouter from 'hocs/with-router';
+import { withRouter, withLocation } from 'react-router-v4-hocs';
 import Social from '../common/Social';
 
 import './Header.css';
@@ -48,4 +47,4 @@ class Header extends React.Component {
 }
 
 
-export default withRouter()(withLocation()(Header));
+export default withRouter(withLocation(Header));
