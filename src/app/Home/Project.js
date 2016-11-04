@@ -47,7 +47,16 @@ function formatScore(score) {
   return +(score * 100).toFixed(0);
 }
 
-function npmsInfo(detail) {
+function npmsInfo(metadata) {
+  return (
+    <div>
+      <h4><Anchor href={metadata.links.npm}>{metadata.name}</Anchor></h4>
+      <pre>{metadata.description}</pre>
+    </div>
+  );
+}
+
+function npmsScore(detail) {
   return (
     <div className="npmsinfo">
       <div className="npmsscroe">
@@ -70,7 +79,7 @@ function Project({ data }) {
   const rst = data[0].data;
   const vst = data[1].data;
   const vv = data[2].data;
-  const vvnpm = data[3].data;
+  const rrhoc = data[3].data;
 
   const lines = [
     {
@@ -80,6 +89,15 @@ function Project({ data }) {
           {gitHubInfo(rst)}
           {buildInfo(rst.full_name)}
           {dependencyInfo(rst.full_name)}
+        </div>
+      )
+    },
+    {
+      title: 'react-router-v4-hocs',
+      content: (
+        <div>
+          {npmsInfo(rrhoc.collected.metadata)}
+          {npmsScore(rrhoc.score.detail)}
         </div>
       )
     },
@@ -99,8 +117,8 @@ function Project({ data }) {
       title: 'vue-vue',
       content: (
         <div>
-          {gitHubInfo(vv)}
-          {npmsInfo(vvnpm.score.detail)}
+          {npmsInfo(vv.collected.metadata)}
+          {npmsScore(vv.score.detail)}
         </div>
       )
     }
@@ -124,8 +142,9 @@ export default preAxios({
     return Promise.all([
       axios.get('https://api.github.com/repos/xiaofan2406/react-starter-kit'),
       axios.get('https://api.github.com/repos/xiaofan2406/vue-starter-kit'),
-      axios.get('https://api.github.com/repos/xiaofan2406/vue-vue'),
-      axios.get('https://api.npms.io/v2/package/vue-vue')
+      axios.get('https://api.npms.io/v2/package/vue-vue'),
+      axios.get('https://api.npms.io/v2/package/react-router-v4-hocs')
+
     ]);
   }
 })(Project);

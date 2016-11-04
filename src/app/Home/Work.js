@@ -11,7 +11,7 @@ function Work() {
       content: (
         <div>
           <p>I work for Engineering Education Australia.</p>
-          <p>One of my responsibilities is maintianing the official
+          <p>One of my responsibilities is maintaining the official
             <code><Anchor href="http://eeaust.com.au/">EEA website</Anchor></code>
           </p>
         </div>
@@ -22,8 +22,7 @@ function Work() {
       content: (
         <div>
           <p><code><Anchor href="http://mycpd.engineersaustralia.org.au/">myCPD</Anchor></code> is a LMS that provides training to professional engineers.</p>
-          <p>I look after this product. My tasks include active maintenance
-          and implementing and deploy new features.</p>
+          <p>I look after this product for active maintenance and feature updates.</p>
         </div>
       )
     }

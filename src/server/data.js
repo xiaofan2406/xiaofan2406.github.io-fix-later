@@ -5,8 +5,7 @@ module.exports = [
     banner: 'Who am I',
     name: 'Xiaofan Wu',
     content: `
-      <p>I am a junior developer based in Melbourne.</p><p> I aim to become a
-        full-stack <em>JavaScript</em> developer.</p>
+      <p>I am a <em>JavaScript</em> enthusiast living in Melbourne.</p>
       <p>Game development and Software Engineering are my secondary interest.</p>
     `
   },
@@ -39,7 +38,7 @@ module.exports = [
     name: 'EEA',
     content: `
       <p>I work for Engineering Education Australia.</p>
-      <p>One of my responsibilities is maintianing the official <em>EEA website</em></p>
+      <p>One of my responsibilities is maintaining the official <em>EEA website</em></p>
     `
   },
   {
@@ -56,21 +55,24 @@ module.exports = [
   {
     slug: 'xiaofan2406/react-starter-kit',
     type: 'github',
-    link: 'https://github.com/xiaofan2406/react-starter-kit',
     name: 'React Starter Kit',
+    banner: 'My projects'
+  },
+  {
+    slug: 'react-router-v4-hocs',
+    type: 'npm',
+    name: 'React Router v4 HOCs',
     banner: 'My projects'
   },
   {
     slug: 'xiaofan2406/vue-starter-kit',
     type: 'github',
-    link: 'https://github.com/xiaofan2406/vue-starter-kit',
     name: 'Vue Starter Kit',
     banner: 'My projects'
   },
   {
     slug: 'vue-vue',
     type: 'npm',
-    link: 'https://www.npmjs.com/package/vue-vue',
     name: 'Vue-Vue',
     banner: 'My projects'
   }

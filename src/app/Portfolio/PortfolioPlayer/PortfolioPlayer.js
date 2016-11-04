@@ -27,7 +27,7 @@ class PortfolioPlayer extends React.PureComponent {
     setFrames(
       infoList.map(() => ({ // index is the same, so no extra needed
         action: () => new Promise((resolve) => {
-          delay(3500).then(resolve);
+          delay(4000).then(resolve);
         })
       }))
     );

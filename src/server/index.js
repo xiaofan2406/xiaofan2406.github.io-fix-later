@@ -39,12 +39,14 @@ export function getData() {
       case 'github':
         return {
           ...item,
-          content: await generateGithubData(item)
+          content: await generateGithubData(item),
+          link: `https://github.com/${item.slug}`
         };
       case 'npm':
         return {
           ...item,
-          content: await generateNpmData(item)
+          content: await generateNpmData(item),
+          link: `https://www.npmjs.com/package/${item.slug}`
         };
       default:
         return item;
